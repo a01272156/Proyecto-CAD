@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+ul {
+    list-style-type: none;
+    margin: 5;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#white{
+  color: white;
+}
+li a:hover {
+    background-color: #111;
+}
+#container{width:100%;}
+#left{float:left;width:100px;}
+#right{float:right;
+    width:250px;
+    height:500px;
+    border: 1px solid #ccc;}
+#center{margin:0 auto;width:100px;}
+#left{
+  border: 1px solid #ccc;
+}
+#Header{
+  display: inline-block;
+}
+</style>
+<div class = "Header">
+<img src="img/logo.png" height="42" width="42"> Soluciones Tecnologicas S.A. de C.V.
+</div>
+<div id="hmenu"> 
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="ubicacion.html">Ubicación</a></li>
+  <li><a href="tiempo.html">Tiempo</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>   
+</div>
+</head>
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Día</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Semana</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Mes</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <div id="right">
+   <ul><p align="center"><font color="white">Informacion General</font></p></ul>
+   <div>
+    <p>Información: Sistema</p>
+    <p>Información: Ubicación</p>
+    <p>Información: Día</p>
+    <p>Información: Usuario</p>
+    <p>Información: Tiempo</p>
+   </div>
+  </div>
+  <div>
+  <h3>Informacion por Día de la semana</h3>
+   <b>Sistema Edecativo</b><select>
+  <option value="01">Sistema 1</option>
+  <option value="02">Sistema 2</option>
+  <option value="04">Sistema 3</option>
+  <option value="05">Sistema 4</option>
+  <option value="06">Sistema 5</option>
+  </select>
+  <br>
+  <img src="img/grafica7.png" height="420" width="550">
+  <br>
+  <button type="button" onclick="alert('¡Iniciar Descarga!')">Descargar</button>
+  <button type="button" onclick="alert('¡Iniciar Impresión!')">Imprimir</button>
+  </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <div id="right">
+   <ul><p align="center"><font color="white">Informacion General</font></p></ul>
+   <div>
+    <p>Información: Sistema</p>
+    <p>Información: Ubicación</p>
+    <p>Información: Semana</p>
+    <p>Información: Usuario</p>
+    <p>Información: Tiempo</p>
+   </div>
+  </div>
+  <div>
+  <h3>Informacion por Semana</h3>
+   <b>Sistema Edecativo</b><select>
+  <option value="01">Sistema 1</option>
+  <option value="02">Sistema 2</option>
+  <option value="04">Sistema 3</option>
+  <option value="05">Sistema 4</option>
+  <option value="06">Sistema 5</option>
+  </select>
+  <br>
+  <img src="img/grafica2.png" height="420" width="550">
+  <br>
+  <button type="button" onclick="alert('¡Iniciar Descarga!')">Descargar</button>
+  <button type="button" onclick="alert('¡Iniciar Impresión!')">Imprimir</button>
+  </div>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+ <div id="right">
+   <ul><p align="center"><font color="white">Informacion General</font></p></ul>
+   <div>
+    <p>Información: Sistema</p>
+    <p>Información: Ubicación</p>
+    <p>Información: Mes</p>
+    <p>Información: Usuario</p>
+    <p>Información: Tiempo</p>
+   </div>
+  </div>
+  <div>
+  <h3>Informacion por Mes</h3>
+   <b>Sistema Edecativo</b><select>
+  <option value="01">Sistema 1</option>
+  <option value="02">Sistema 2</option>
+  <option value="04">Sistema 3</option>
+  <option value="05">Sistema 4</option>
+  <option value="06">Sistema 5</option>
+  </select>
+  <br>
+  <img src="img/grafica3.png" height="420" width="550">
+  <br>
+  <button type="button" onclick="alert('¡Iniciar Descarga!')">Descargar</button>
+  <button type="button" onclick="alert('¡Iniciar Impresión!')">Imprimir</button>
+  </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+</body>
+
+</html> 
